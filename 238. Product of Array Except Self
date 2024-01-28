@@ -1,0 +1,39 @@
+Link : https://leetcode.com/problems/product-of-array-except-self/
+
+My approach in Python : 
+
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        r = [1]*len(nums)
+        pr=1
+        po=1
+
+        for i in range(0,len(nums)):
+            r[i] = pr
+            pr*=nums[i]
+
+        for i in range(len(nums)-1,-1,-1):
+            r[i]*=po
+            po*=nums[i]
+        
+        return r
+
+My approach in JavaScript : 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var productExceptSelf = function(nums) {
+    let r=new Array(nums.length).fill(1);
+    let pr=1;
+    let po=1;
+    for(i=0;i<nums.length;i++){
+        r[i]=pr;
+        pr=pr*nums[i];
+    }
+    for(i=nums.length-1;i>-1;i--){
+        r[i]=r[i]*po;
+        po=po*nums[i];
+    }
+    return(r);
+    };
