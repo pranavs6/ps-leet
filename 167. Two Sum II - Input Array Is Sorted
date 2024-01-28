@@ -1,0 +1,15 @@
+Link : https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
+
+My approach in Python :
+
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        x,y=0,0
+        for i in range(0,len(numbers)):
+            x=i
+            d=target-numbers[i]
+            numbers[i]="X"
+            if(d in numbers):
+                return(i+1, numbers.index(d)+1)
+            numbers[i]=d+target
+        
