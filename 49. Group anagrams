@@ -27,4 +27,14 @@ My approach in Python :
                 F.append(i)
         return(F)
 
-  2.
+  2.Simpler approach - O(m*n); m=number of strings; n=avg length of a string :
+
+    class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        r=defaultdict(list)
+        for i in strs:
+            c=[0]*26
+            for ch in i:
+                c[ord(ch)-ord("a")]+=1
+            r[tuple(c)].append(i)
+        return(r.values())
