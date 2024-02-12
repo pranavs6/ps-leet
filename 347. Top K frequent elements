@@ -1,0 +1,21 @@
+Link : https://leetcode.com/problems/top-k-frequent-elements/description/
+
+My approach in python : 
+  1.Brute force - O(n): 
+    class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        N=[]
+        O=[]
+        F=[]
+
+        for i in nums:
+            if i not in N:
+                N.append(i)
+                O.append(nums.count(i))
+
+        for i in range(0,k):
+            Ni=O.index(max(O))
+            F.append(N[Ni])
+            O[O.index(max(O))]=-1
+
+        return(F)
