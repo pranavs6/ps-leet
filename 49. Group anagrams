@@ -1,0 +1,30 @@
+Link : 
+
+My approach in Python : 
+
+  1.Brute force - TLE - O(n2) : 
+
+    class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        M=[]
+        M1=[]
+        for i in range(0,len(strs)):
+            L=[]
+            L.append(strs[i])
+            for j in (strs[0:i]+strs[i+1:]):
+                if sorted(strs[i])==sorted(j):
+                    L.append(j)
+            if sorted(strs[i]) not in M1:
+                M.append(L)
+                M1+=L
+            L=[]
+        F=[]
+        for i in M:
+            i=i.sort()
+        M.sort()
+        for i in M:
+            if i not in F:
+                F.append(i)
+        return(F)
+
+  2.
