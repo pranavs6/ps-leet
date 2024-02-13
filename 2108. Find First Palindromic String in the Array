@@ -1,0 +1,11 @@
+Link : https://leetcode.com/problems/find-first-palindromic-string-in-the-array/
+
+My approach in python : 
+  class Solution:
+    def firstPalindrome(self, words: List[str]) -> str:
+        p=""
+        for i in words:
+            if i==i[::-1]:
+                p=i
+                break
+        return(p)
