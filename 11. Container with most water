@@ -1,13 +1,16 @@
-class Solution:
-    def maxArea(self, height: List[int]) -> int:
-        l,r=0,len(height)-1 #The left and right pointers that move over the array
-        s=0 #The main sum to be returned
+Link : https://leetcode.com/problems/container-with-most-water/description/
 
-        while r>l:
-            s=max(s, (r-l)*min(height[r],height[l]))
-            if height[r]>height[l]:
-                l+=1
-            else:
-                r-=1
-
-        return s
+My approach in python : 
+    class Solution:
+        def maxArea(self, height: List[int]) -> int:
+            l,r=0,len(height)-1 #The left and right pointers that move over the array
+            s=0 #The main sum to be returned
+    
+            while r>l:
+                s=max(s, (r-l)*min(height[r],height[l]))
+                if height[r]>height[l]:
+                    l+=1
+                else:
+                    r-=1
+    
+            return s
