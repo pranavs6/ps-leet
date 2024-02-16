@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/reverse-words-in-a-string/description
+
+My approach in python :
+  class Solution:
+    def reverseWords(self, s: str) -> str:
+        L=s.split()
+        L=L[::-1]
+        f=''
+        for i in L:
+            f+=i+" "
+        f=f[:-1]
+        return(f)
