@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/majority-element/description/
+
+My approach in python : 
+  class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        d=Counter(nums)
+        a=list(d.values())
+        i=a.index(max(d.values()))
+        s=list(d.keys())
+        return(s[i])
+
+        
