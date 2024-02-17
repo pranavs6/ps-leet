@@ -10,3 +10,16 @@ My approaches in python :
             print(a)
             if len(a)!=len(list(set(a))): return True
         return False
+  2. Optimized approach - AC :
+    class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        L=0
+        s=set()
+        for R in range(len(nums)):
+            if R-L>k:
+                s.remove(nums[L])
+                L+=1
+            if nums[R] in s: 
+                return True
+            s.add(nums[R])
+        return False
