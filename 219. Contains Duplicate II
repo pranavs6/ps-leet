@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/contains-duplicate-ii/description
+
+My approaches in python : 
+  1. Brute force - 18/58 TC passed : 
+    class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        if k==0: return False
+        for i in range(0,len(nums)-k):
+            a=nums[i:i+k+1]
+            print(a)
+            if len(a)!=len(list(set(a))): return True
+        return False
