@@ -1,6 +1,6 @@
 # ps-leet
 
-Hiya bluds, this is PS and this repository stores up all my leetcode stuff (from Jan 2024)
+Hiya bluds, this repository stores up all my leetcode stuff (from Jan 2024)
 
 I mostly stick with python, sometimes peek at javascript, C++, so uh yeah
 
