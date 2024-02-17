@@ -1,0 +1,23 @@
+Link : https://leetcode.com/problems/happy-number/description/
+
+My approachs in python : 
+  1. Brute Force - 324/420 TC passed : 
+    class Solution:
+    def isHappy(self, n: int) -> bool:
+        s=str(n)
+        x=0
+        for i in range(0,len(s)):
+            x+=int(s[i])
+        print(x)
+        return(x%10==0)
+
+  2. Optimized approach - AC :
+    class Solution:
+    def isHappy(self, n: int) -> bool:
+        A=set()
+        while n!=1:
+            if n in A: return(False)
+            A.add(n)
+            n=sum([int(i) ** 2 for i in str(n)])
+        else:
+            return(True)
