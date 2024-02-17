@@ -1,0 +1,25 @@
+Link : 
+
+My approaches in python :
+  1. Brute Force - 38/42 TC Passed : 
+    class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        L=[]
+        X=s.split()
+        for i in pattern:
+            L.append(i)
+        if len(list(set(L)))==len(list(set(s.split()))) and len(L)==len(X):
+            return(True)
+        return(False)
+
+  2. Optimized approach - AC :
+    class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        L=s.split()
+        L1=[]
+        L2=[]
+        for i in pattern:
+            L1.append(pattern.index(i))
+        for i in L:
+            L2.append(L.index(i))
+        return(L1==L2)
