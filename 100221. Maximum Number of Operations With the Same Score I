@@ -1,0 +1,17 @@
+Biweekly Contest 124 - P1
+
+My approach in python : 
+  class Solution:
+      def maxOperations(self, nums: List[int]) -> int:
+          s=nums[0]+nums[1]
+          nums=nums[2:]
+          c=1
+          while len(nums)>=2:
+              print(nums)
+              if nums[0]+nums[1]==s:
+                  print(nums[0],nums[1])
+                  c+=1
+                  nums=nums[2:]
+              else:
+                  return c
+          return c
