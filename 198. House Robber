@@ -1,0 +1,16 @@
+Link : https://leetcode.com/problems/house-robber/
+
+My approaches in python : 
+  1. Brute force - 40/70 TC passed : 
+      class Solution:
+        def rob(self, nums: List[int]) -> int:
+            s=[]
+            a=0
+            b=0
+            for i in range(0,len(nums)):
+                if i%2==0:
+                    a+=nums[i]
+                else:
+                    b+=nums[i]
+    
+            return max(a,b)
