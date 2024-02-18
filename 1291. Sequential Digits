@@ -1,0 +1,13 @@
+Link : https://leetcode.com/problems/sequential-digits/description/
+
+My approaches in python : 
+  1. Brute force - AC :
+    class Solution:
+      def sequentialDigits(self, low: int, high: int) -> List[int]:
+          a="123456789"
+          L=[]
+          for i in range(0,len(a)):
+              for j in range(i+1,len(a)+1):
+                  if int(a[i:j]) in range(low, high + 1):
+                      L.append(int(a[i:j]))
+          return(sorted(L))
