@@ -1,0 +1,22 @@
+Link : https://leetcode.com/problems/sort-colors/description/
+
+My approaches in python :
+  1. class Solution:
+      def sortColors(self, nums: List[int]) -> None:
+          nums.sort()
+     #I'm juat kidding! PS : It is pretty efficient, but no.
+  
+  2. class Solution:
+      def sortColors(self, nums: List[int]) -> None:
+          """
+          Do not return anything, modify nums in-place instead.
+          """
+          main=[0,0,0]
+          for i in nums:
+              main[i]+=1
+          print(main)
+          final=[]
+          for i in range(3):
+              final=final + [i]*main[i]
+          for i in range(len(nums)):
+              nums[i]=final[i]
