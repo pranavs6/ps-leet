@@ -14,3 +14,13 @@ My approaches in python :
                     b+=nums[i]
     
             return max(a,b)
+  2. DP - AC : 
+    class Solution:
+        def rob(self, nums: List[int]) -> int:
+            x=0
+            y=0
+            for n in nums:
+                temp=max(n+x,y)
+                x=y
+                y=temp
+            return y
