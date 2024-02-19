@@ -1,0 +1,11 @@
+Link : https://leetcode.com/problems/remove-element/description/
+
+My approach in python : 
+  class Solution:
+      def removeElement(self, nums: List[int], val: int) -> int:
+          if val not in nums : return len(nums)
+          l=nums.count(val)
+          nums.sort()
+          i=nums.index(val)
+          nums=nums[:i-1]+nums[i+l:]
+          return(len(nums)-l)
