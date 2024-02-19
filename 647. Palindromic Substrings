@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/palindromic-substrings/description
+
+My approach in python :
+  class Solution:
+      def countSubstrings(self, s: str) -> int:
+          x=0
+          for i in range(0,len(s)):
+              for j in range(0,len(s)+1):
+                  a=s[i:j]
+                  if s[i:j]!="" and a==a[::-1]:
+                      x+=1
+          return(x)
