@@ -1,0 +1,14 @@
+Link : https://leetcode.com/problems/longest-palindromic-substring/description/
+
+My approach in python :
+  class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        x=''
+        if s==s[::-1] : return s
+        for i in range(0,len(s)):
+            for j in range(i,len(s)+1):
+                a=s[i:j]
+                if a==a[::-1] and len(x)<len(a):
+                    x=a
+        return(x)
+        
