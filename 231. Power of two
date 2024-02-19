@@ -1,0 +1,7 @@
+Link : https://leetcode.com/problems/power-of-two/
+
+My approach in python :
+  class Solution:
+      def isPowerOfTwo(self, n: int) -> bool:
+          a=[2**i for i in range(0,31)]
+          return(n in a)
