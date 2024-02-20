@@ -1,0 +1,17 @@
+Link : https://leetcode.com/problems/is-subsequence/description/
+
+My approach in python : 
+  class Solution:
+      def isSubsequence(self, s: str, t: str) -> bool:
+          s=s.strip()
+          lp=list(t)
+          if s in t or s=='':
+              return True
+          if s[0] not in t:
+              return False
+          for i in s:
+              if i in lp:
+                  lp=lp[lp.index(i)+1:]
+              else:
+                  return False
+          return(True)
