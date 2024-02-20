@@ -13,3 +13,8 @@ My approaches in python :
       def missingNumber(self, nums: List[int]) -> int:
           a=[i for i in range(0,len(nums)+1)]
           return(sum(a)-sum(nums))
+
+  3. A lot better - O(n):
+    class Solution:
+      def missingNumber(self, nums: List[int]) -> int:
+          return(((len(nums))*(len(nums)+1))//2-sum(nums))
