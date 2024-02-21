@@ -1,0 +1,13 @@
+Link : https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range/description/
+
+My approach in python : 
+  class Solution:
+      def vowelStrings(self, words: List[str], left: int, right: int) -> int:
+          v="aeiouAEIOU"
+          ind=[]
+          for i in words:
+              if i[0] in v and i[-1] in v:
+                  ind.append(1)
+              else:
+                  ind.append(0)
+          return(sum(ind[left:right+1]))
