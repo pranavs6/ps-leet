@@ -1,0 +1,13 @@
+Link : https://leetcode.com/problems/excel-sheet-column-title/description/
+
+My approach in python : 
+  class Solution:
+      def convertToTitle(self, columnNumber: int) -> str:
+          result=''
+          while columnNumber:
+              columnNumber=columnNumber-1
+              letter=chr(columnNumber % 26 + ord('A'))
+              result=letter+result
+              columnNumber =columnNumber//26
+          return result
+          
