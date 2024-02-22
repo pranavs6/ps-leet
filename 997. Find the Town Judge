@@ -1,0 +1,21 @@
+Link : https://leetcode.com/problems/find-the-town-judge/description
+
+My approach in python :
+  class Solution:
+      def findJudge(self, n: int, trust: List[List[int]]) -> int:
+          dict1 = {}
+          list1 = []
+          if n == 1:
+              return n
+          for i in trust:
+              if i[1] in dict1:
+                  dict1[i[1]] += 1
+              else:    
+                  dict1[i[1]] = 1
+              list1.append(i[0])
+          
+          for i in dict1:
+              if dict1[i] == n-1 and i not in list1:
+                  return i
+          return -1
+          
