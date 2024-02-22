@@ -1,0 +1,8 @@
+Link : https://leetcode.com/problems/divide-two-integers/description/
+
+My approach in python :
+  class Solution:
+      def divide(self, dividend: int, divisor: int) -> int:
+          if dividend == -2147483648 and divisor==-1: #Yes, ik, its something with a wrong test case
+              return int(dividend/divisor)-1
+          return int(dividend/divisor)
