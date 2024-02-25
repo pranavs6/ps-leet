@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/count-asterisks/description/
+
+My approach in python : 
+  class Solution:
+      def countAsterisks(self, s: str) -> int:
+          x,c=0
+          for i in s:
+              print(i,x,c)
+              if "|" in i and x==0: x=1
+              elif "|" in i and x==1: x=0
+              if x==0 and i=="*": c+=1
+          return c
