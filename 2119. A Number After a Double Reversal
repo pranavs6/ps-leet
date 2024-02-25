@@ -1,0 +1,7 @@
+Link : https://leetcode.com/problems/a-number-after-a-double-reversal/description/
+
+My approach in python :
+  class Solution:
+      def isSameAfterReversals(self, num: int) -> bool:
+          s=int(str(num)[::-1])
+          return(num==int(str(s)[::-1]))
