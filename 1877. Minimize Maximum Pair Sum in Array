@@ -1,0 +1,14 @@
+Link : https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/
+
+My approach in python :
+  class Solution:
+      def minPairSum(self, nums: List[int]) -> int:
+          s=0
+          nums.sort()
+          l=0
+          r=len(nums)-1
+          while l<r:
+              s=max(s,nums[l]+nums[r])
+              l+=1
+              r-=1
+          return s
