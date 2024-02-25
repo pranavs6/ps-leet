@@ -1,0 +1,9 @@
+Link : https://leetcode.com/problems/number-of-rectangles-that-can-form-the-largest-square/description/
+
+My approach in python : 
+  class Solution:
+      def countGoodRectangles(self, rectangles: List[List[int]]) -> int:
+          f=[]
+          for i in rectangles:
+              f.append(min(i))
+          return f.count(max(f))
