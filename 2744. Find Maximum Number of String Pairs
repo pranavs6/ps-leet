@@ -1,0 +1,7 @@
+Link : https://leetcode.com/problems/find-maximum-number-of-string-pairs/
+
+My approach in python : 
+  class Solution:
+      def maximumNumberOfStringPairs(self, words: List[str]) -> int:
+          s=[''.join(sorted(i)) for i in words]
+          return abs(len(set(s))-len(s))
