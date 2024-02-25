@@ -1,0 +1,11 @@
+Link : https://leetcode.com/problems/separate-the-digits-in-an-array/
+
+My approach in python : 
+  class Solution:
+      def separateDigits(self, nums: List[int]) -> List[int]:
+          f=[]
+          for i in nums:
+              f=f+list(str(i))
+          for i in range(len(f)):
+              f[i]=int(f[i])
+          return f
