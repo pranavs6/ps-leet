@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/row-with-maximum-ones/description/
+
+My approach in python : 
+  class Solution:
+      def rowAndMaximumOnes(self, mat: List[List[int]]) -> List[int]:
+          n=0
+          c=0
+          for r in range(0,len(mat)):
+              if c<mat[r].count(1):
+                  c=mat[r].count(1)
+                  n=r
+          return [n,c]
