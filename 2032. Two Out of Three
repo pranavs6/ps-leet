@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/two-out-of-three/description/
+
+My approach in python :
+  class Solution:
+      def twoOutOfThree(self, nums1: List[int], nums2: List[int], nums3: List[int]) -> List[int]:
+          n=set(nums1+nums2+nums3)
+          l=[]
+          for i in n:
+              if i in nums1 and i in nums2 : l.append(i)
+              elif i in nums2 and i in nums3 : l.append(i)
+              elif i in nums3 and i in nums1 : l.append(i)
+          return l
