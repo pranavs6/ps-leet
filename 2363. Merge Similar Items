@@ -1,0 +1,15 @@
+Link : https://leetcode.com/problems/merge-similar-items/description/
+
+My approach in python :
+  class Solution:
+      def mergeSimilarItems(self, items1: List[List[int]], items2: List[List[int]]) -> List[List[int]]:
+          d={x:y for x,y in items1}
+          f=[]
+          for a,b in items2:
+              if a in d:
+                  d[a]+=b
+              else:
+                  d[a]=b
+          for i,j in d.items():
+              f.append([i,j])
+          return sorted(f)
