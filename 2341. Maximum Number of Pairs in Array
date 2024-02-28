@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/maximum-number-of-pairs-in-array/submissions/1188904301/
+
+My approach in python : 
+  class Solution:
+      def numberOfPairs(self, nums: List[int]) -> List[int]:
+          p,c=0,0
+          s=set(nums)
+          for i in s:
+              t=nums.count(i)
+              p+=t//2
+              c+=t%2
+          return [p,c]
