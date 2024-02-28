@@ -1,0 +1,14 @@
+Link : https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/submissions/1188927137/
+
+My approach in python :
+  class Solution:
+      def maximumValue(self, strs: List[str]) -> int:
+          n=0
+          for i in strs:
+              if i.isdigit():
+                  x=int(i)
+              else:
+                  x=len(i)
+              if n<x:
+                  n=x
+          return n
