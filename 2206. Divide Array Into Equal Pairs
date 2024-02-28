@@ -1,0 +1,9 @@
+Link : https://leetcode.com/problems/divide-array-into-equal-pairs/description/
+
+My approach in python : 
+  class Solution:
+      def divideArray(self, nums: List[int]) -> bool:
+          c=Counter(nums).values()
+          for i in c:
+              if i%2!=0: return False
+          return True
