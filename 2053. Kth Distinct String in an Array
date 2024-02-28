@@ -1,0 +1,14 @@
+Link : https://leetcode.com/problems/kth-distinct-string-in-an-array/description/
+
+My approach in python : 
+  class Solution:
+      def kthDistinct(self, arr: List[str], k: int) -> str:
+          c=Counter(arr).items()
+          d=[]
+          for x,y in c:
+              if y==1:
+                  d.append(x)
+          if len(d)<=k-1:
+              return ''
+          else:
+              return d[k-1]
