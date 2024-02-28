@@ -1,0 +1,14 @@
+Link : https://leetcode.com/problems/hamming-distance/description/
+
+My approach in python : 
+  class Solution:
+      def hammingDistance(self, x: int, y: int) -> int:
+          c=0
+          a=str(bin(x))[2::]
+          b=str(bin(y))[2::]
+          a=(max(len(a),len(b))-len(a))*str(0)+a
+          b=(max(len(a),len(b))-len(b))*str(0)+b
+          for i in range(len(str(b))):
+              if str(b)[i]!=str(a)[i]:
+                  c+=1
+          return c
