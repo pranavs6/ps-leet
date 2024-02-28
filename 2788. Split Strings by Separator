@@ -1,0 +1,12 @@
+Link : https://leetcode.com/problems/split-strings-by-separator/description/
+
+My approach in python : 
+  class Solution:
+      def splitWordsBySeparator(self, words: List[str], separator: str) -> List[str]:
+          a=[]
+          f=[]
+          for i in words:
+              a+=i.split(separator)
+          for i in a:
+              if i!="":f.append(i)
+          return f
