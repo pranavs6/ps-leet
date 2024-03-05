@@ -1,0 +1,30 @@
+Link : https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/description/
+
+My approaches in python : 
+  1.class Solution:
+      def convertTime(self, current: str, correct: str) -> int:
+          a=0
+          x=int(current[0:2])*60 + int(current[3:])
+          y=int(correct[0:2])*60 + int(correct[3:])
+          d=abs(x-y)
+          while d!=0:
+              if d>=60: d-=60
+              elif d>=15: d-=15
+              elif d>=5: d-=5
+              elif d>=1: d-=1
+              a+=1
+              print(a,d)
+          return a
+
+  2.class Solution:
+      def convertTime(self, current: str, correct: str) -> int:
+          x=int(current[0:2])*60 + int(current[3:])
+          y=int(correct[0:2])*60 + int(correct[3:])
+          d=abs(x-y)
+          o=d//60
+          d%=60
+          o+=d//15
+          d%=15
+          o+=d//5
+          d%=5
+          return o+d
